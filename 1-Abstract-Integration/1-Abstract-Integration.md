@@ -1,8 +1,4 @@
-# Test to see Push
-
 # Abstract Integration
-
-<img src="/1-Abstract-Integration/tex/4d93e70855b757ad3e4872ab1a9648b7.svg?invert_in_darkmode&sanitize=true" align=middle width=70.61888459999999pt height=22.831056599999986pt/>
 
 ### **Topological Space**
 Let <img src="/1-Abstract-Integration/tex/f603257cd2ffe494bc1f2e4d50253db5.svg?invert_in_darkmode&sanitize=true" align=middle width=83.84686034999999pt height=24.65753399999998pt/>.  Then <img src="/1-Abstract-Integration/tex/7e65c00cfc0a4e23e116a92849059ffa.svg?invert_in_darkmode&sanitize=true" align=middle width=55.536419399999986pt height=24.65753399999998pt/> is a **topological space** <img src="/1-Abstract-Integration/tex/b58782f9626978f96019fe94cf45b6d6.svg?invert_in_darkmode&sanitize=true" align=middle width=30.13714605pt height=14.15524440000002pt/>
