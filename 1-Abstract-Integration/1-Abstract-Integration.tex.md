@@ -10,7 +10,7 @@ Let $\mathcal{T}_X \subset \mathcal{P}(X)$.  Then $(X,\mathcal{T}_X)$ is a *topo
 
 $\mathcal{T}_X$ is a *topology* and $\mathscr{T}_X$ is the *family of topologies* on $X$.
 
-For $(X,\mathcal{T}_X)$ and $(Y,\mathcal{T}_Y)$, we say a function $f : X \to Y$ is *continuous* when $\bigcup_{V \in \mathcal{T}_Y}\{f^{-1}(V)\} \subseteq \mathcal{T}_X$.  Equivalently we write $f \in \mathcal{C}(X \to Y)$
+For $(X,\mathcal{T}_X)$ and $(Y,\mathcal{T}_Y)$, we say a function $f : X \to Y$ is *continuous* when $\bigcup_{V \in \mathcal{T}_Y}\{f^{-1}(V)\} \subseteq \mathcal{T}_X$.  Equivalently we write $f \in C(X \to Y)$
 
 Locally, we can say $g : X \to Y$ is *continuous at the point* $x_0$ provided every neighborhood of $g(x_0)$ contains the image of a neighborhood of $x_0$.  It can be proven that a function is continous if and only if it is continuous at all points.
 
@@ -64,7 +64,7 @@ Let $d : X \times X \to \R^+ \cup \{0\}$.  Then $(X,d) \text{is a metric space} 
 
 ## The Cartesian Product (on $\R$) preserves measurability
 
-For $(X,\mathfrak{M}_X)$ and $(Y,\mathcal{T}_Y)$, $u,v: X \to \mathbb{R}$ and $\Phi \in \mathcal{C}(\mathbb{R}^2 \to Y)$
+For $(X,\mathfrak{M}_X)$ and $(Y,\mathcal{T}_Y)$, $u,v: X \to \mathbb{R}$ and $\Phi \in C(\mathbb{R}^2 \to Y)$
 
 $x \mapsto \Phi(u(x),v(x))$ defines a measurable function on $X$
 
