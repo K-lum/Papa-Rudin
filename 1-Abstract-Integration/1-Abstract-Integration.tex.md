@@ -322,7 +322,7 @@ Need
 
 ## Almost Everywhere
 
-A property $P$ holds **almost everywhere** (abreviated a.e.) on $E$ provided it holds on $E - N$ where $\mu(N)=0$ 
+A property $P$ holds **almost everywhere** (abreviated a.e.) on $E$ provided it holds on $E - N$ where $\mu(N)=0$
 
 ## Measures can be completed
 
