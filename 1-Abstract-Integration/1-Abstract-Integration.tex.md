@@ -44,7 +44,7 @@ for each enumerated property of $\sigma$-algebras we show its equivalence,
 2. $\bigcap_{n=0}^\infty A_n = \big(\bigcup_{n=0}^\infty A_n^c \big)^c \in \mathfrak{M}$
 3. $A-B=B^c \cap A \in \mathfrak{M}$
 
-## *Continuous function composition preserves measurability*
+## Continuous function composition preserves measurability
 
 $\underline{Proof}$
 
@@ -66,7 +66,7 @@ Let $d : X \times X \to \R^+ \cup \{0\}$.  Then $(X,d) \text{is a metric space} 
 
 For $(X,\mathfrak{M}_X)$ and $(Y,\mathcal{T}_Y)$, $u,v: X \to \mathbb{R}$ and $\Phi \in \mathcal{C}(\mathbb{R}^2 \to Y)$
 
-$x \mapsto \Phi(u(x),v(x))$ defines a measurable function on X
+$x \mapsto \Phi(u(x),v(x))$ defines a measurable function on $X$
 
 >The key to this proof is that an open set in $\R^2$ is a cartesian product of subsets of $\R^1$ that are themselves open.  I should come back here and try to work out if $\R$ is really neccesary or if replacing $\R$ with any topological space and product space would work.
 
@@ -98,13 +98,13 @@ Let $\mathscr{F} \subset \mathcal{P}(X)$  Then there is some $\sigma$-algebra $\
 
 $$\mathscr{F} \subset \mathfrak{M}^* \subset \mathfrak{M}$$
 
-for all possible $\mathfrak{M}$ $\sigma$-algebras in $X$ containing \mathscr{F}
+for all possible $\mathfrak{M}$ $\sigma$-algebras in $X$ containing $\mathscr{F}$
 
 $\underline{Proof}$
 
 Since $\mathcal{P}(X)\in \big\{\mathfrak{M} \in  \Omega_X  \ : \  \mathscr{F} \subset \mathcal{X} \cap \mathfrak{M} \big\}$ we know $\mathscr{F} \in \mathfrak{M}^* := \bigcap \big\{\mathfrak{M} \in  \Omega_X  \ : \ \mathscr{F} \subset \mathscr{F} \cap \mathfrak{M}  \big\}$.  By its definition $\mathfrak{M}^*$  contains all possible $\sigma$-algebras in $X$ containing \mathscr{F}.  Hence we need only prove it is itself a $\sigma$-algebra.  Notice any collection of sets that form a subset of $\mathfrak{M}^*$ must be contained in all $\sigma$-algebras on $X$ containing $\mathscr{F}$ and hence any $\sigma$-algebra operation you could do on that collection would be contained in all $\sigma$-algebras on $X$ containing $\mathscr{F}$, and hence would be contained in the their intersection (i.e. $\mathfrak{M}^*$).  
 
-## More Properties relating a topology and a $\sigma$-algebra
+## Properties of mappings from measurable spaces
 
 For $(X,\mathfrak{M}_X)$, $(Y,\mathcal{T}_Y)$, and $f : X \to Y$
 
@@ -117,23 +117,257 @@ $\textit{Proof}$
 
 ## **Upper and Lower Limits**
 
-1. A function is $\mu$ is **countably additive** if $\forall A \in \mathcal{F}(\N \to X)$ such that $A(\N)$ are disjoint $\mu(\bigcup_{i=1}^\infty A_i)=\sum_{i=1}^\infty A_i$
-2. A **positive measure** is a function $\mu: \mathfrak{M}_X \to [0,\R]$ such that it is *countably additive*
-3. A **complex measure** is a complex-valued countably additive function defined on a $\sigma$-algebra
+For $a : \N \to [-\infty,\infty]$
 
-### **Lebesgue's Monotone Convergence Theorem**
+$$\beta:=\limsup_{k \to \infty} a_k:= \lim_{n \to \infty} \ \sup \{a(m)  \ : \ m > n \}$$
+$$\alpha:=\liminf_{k \to \infty} a_k:= \lim_{n \to \infty} \ \inf \{a(m)  \ : \ m > n \}$$
 
-A sequence of dominating functions that converges pointwise to some $f$
+For $f : \N \to \mathcal{F}(X \to [-\infty,\infty])$
 
-1. Is measurable
-2. the limit of the integral values of the sequence converge to the integral of $f$
+$\sup_{n} f_n$ is the function that maps
 
-### Lebesgue integrable functions
+$$x \mapsto \sup ( \{f_n(x) \ : \  n \in \N \})$$
 
-Let $\mu$ be a positive measure on an arbirary measurable space $X$
+$\limsup_{n \to \infty} f_n$ is the function that maps
 
-$L^1(\mu):=\Big\{ f \in \mathcal{F}(X \to \mathbb{C}) \ : \ \bigcup_{V \in \mathcal{T}_\mathbb{C}}\{f^{-1}(V)\} \subseteq \mathfrak{M}_X \ \land \ \int_X|f|d\mu < \infty \Big\}$
+$$x \mapsto \lim_{m \to \infty} \sup ( \{f_n(x) \ : \  n > m \})$$
+
+## **Pointwise limit**
+
+For $f : \N \to \mathcal{F}(X \to [-\infty,\infty])$ if
+
+$$f(x)=\lim_{n \to \infty} f_n (x)$$
+
+Then $f$ is the pointwise limit of $\{f_n\}$ assuming $f_n(x)$ converges for all $x \in X$
+
+## limsups preserve measurability
+
+$\underline{Proof}$
+
+need
+
+## **Measures and Measure Space**
+
+A function $f : X \to Y$ is **countably additive** if $\forall A \in \mathcal{F}(\N \to X)$
+
+$$f(\bigcup_{i=0}^\infty A_i)=\sum_{i=0}^\infty f(A_i)$$
+
+When all $A(\N)$ are disjoint
+
+A function $f : X \to Y$ is **finitely additive** if $\forall n \in \N$ and $\forall A \in \mathcal{F}(\N \to X)$
+
+$$f(\bigcup_{i=0}^n A_i)=\sum_{i=0}^n f(A_i)$$
+
+When all $A(\N)$ are disjoint
+
+A **positive measure** is a function $\mu: \mathfrak{M}_X \to [0,\infty]$ such that it is *countably additive*
+
+A **complex measure** is a function $\mu: \mathfrak{M}_X \to \mathbb{C}$ such that it is *countably additive*
+
+A **measure space** is a measurable space with a positive measure defined its $\sigma$-algebra
+
+## Elementary Properties of Positive Measure
+
+For measurable space $(X,\mathfrak{M}_X)$ and positive measure $\mu : \mathfrak{M}_X \to [0,\infty]$
+
+1. $\mu (\emptyset)=0$
+2. $\mu$ is finitely additive
+3. For $A,B \in \mathfrak{M} \quad A \subset B \rightarrow \mu(A) \leq \mu(B)\quad$ (called **monotonicity**)
+4. $\lim_{n \to \infty} \mu (\bigcup_{m=0}^n A_m)=\mu(\lim_{n \to \infty} \bigcup_{m=0}^n A_m)$
+5. $\lim_{n \to \infty} \mu (\bigcap_{m=0}^n A_m)=\mu(\lim_{n \to \infty} \bigcap_{m=0}^n A_m)$ when $\mu(A_0)$ is finite
+
+$\underline{Proof}$
+
+need
+
+## The Counting Measure and The Unit Mass
+
+$\mu : \mathcal{P}(X) \to [0,\infty]$
+defined
+
+$$\mu(E)=\begin{cases} \textrm{card}(E) & \textrm{card}(E)<\aleph_0 \\ \infty & \textrm{card}(E) \geq \aleph_0\end{cases}$$
+
+Gives the **counting measure** on $X$
+
+For some $x_0 \in X$ we say $\mu : \mathcal{P}(X) \to [0,\infty]$
+defined
+
+$$\mu(E)=\begin{cases} 1 & x_0 \in E \\ 0 & x_0 \notin E \end{cases}$$
+
+is the **unit mass** *concentrated at $x_0$*
+
+## Arithmetic on $[0, \infty]$
+
+We define
+
+$a + \infty=\infty + a:=\infty$
+
+and
+
+$a\cdot \infty=\infty \cdot a:=\begin{cases} \infty & 0 < a < \infty \\ 0 & a=0 \end{cases}$
+
+Defining Arithmetic on $[0, \infty]$ as such is communtative, associative, and satisfies the distributive laws.
+
+The following modifications to the cancellation laws hold
+
+1. When $a < \infty, \quad a+b=a+c \rightarrow b=c \lor a < \infty$
+
+2. When $0 < a < \infty, \quad ab=ac \rightarrow b=c$
+
+## **Simple Function**
+
+$s : (X,\mathfrak{M}_X) \to \mathbb{C}$ is a simple function provided the cardinality of $s(X)$ is finite.
+
+The set of all such simple functions is given $\mathfrak{S}_{X \to \mathbb{C}}$
+
+## Simple functions can approximate measurable functions
+
+For $(X,\mathfrak{M}_X)$ and measurable $f : X \to [0,\infty]$  There exists $\mathfrak{s} \in \mathcal{F}(\N \to \mathfrak{S}_{X \to [0,\infty]})$ such that  
+
+1. $\forall n \in \N \quad 0 \leq \mathfrak{s}_n \leq \mathfrak{s}_{n+1}$
+2. $f$ is the poinwise limit of $\mathfrak{s}_n$
+
+Note that when we write an inequality between two functions, this implies that the inequality holds on the output of the two function whenever the functions are evaluated on a common element of their domain.
+
+$\underline{Proof}$
+
+need
+
+## Integration of Positive Functions
+
+The **Integral** of a measurable simple function $s : X \to [0,\infty]$ is defined
+
+$$\int_E s \ d\mu = \sum_{\alpha \in s(X)} \alpha\cdot \mu(E \cap s^{-1}(\alpha))$$
+
+The **Lebesgue Integral** of a measurable function $f : X \to [0,\infty]$ is defined
+
+$$\int_E f \ d\mu = \sup \{ \int_E s \ d\mu \ : \ s \in \mathfrak{S}_{X \to [0,\infty]} \ \land \ 0 \leq s \leq f \}$$
+
+## Elementary Properties of the Lebesgue Integral
+
+The Following follow immediately from out definitions of the *Lebesgue integral*
+
+1. $0 \leq f \leq g \implies \int_E f \ d \mu \leq \int_E g \ d \mu$
+2. $A \subset B \land f \geq 0 \implies \int_A f \ d \mu \leq \int_B f \ d \mu$
+3. $\forall c \in \R \quad f \geq 0 \implies c \cdot \int_E f \ d \mu = \int_E c \cdot f \ d \mu$
+4. $\forall x \in E \quad f(x)=0 \implies \int_E f d \mu =0$
+5. $\mu(E)=0 \implies \int_E f d \mu =0$
+6. $f \geq 0 \implies \int_E f d \mu = \int_X \bm{1}_E \cdot f d \mu$
+
+## **Lebesgue's Monotone Convergence Theorem**
+
+Let $\{f_n\}$ be a sequence of measurable functions on $X$ that converge pointwise to $f$ and
+
+$$\forall n \in \N \quad \forall x \in X \quad 0 \leq f_n(x) \leq f_{n+1}(x)$$
+
+Then $f$ is measurable and as $n \to \infty$
+
+$$ \int_X f_n d \mu \to \int_X f d \mu $$
+
+$\underline{Proof}$
+
+Need
+
+## Correlaries of Lebesgue's Monotone Convergence Theorem
+
+Let $\{f_n\}$ be a sequence of measurable functions on $X$ that converge pointwise then
+
+$$\int_X \lim_{n \to \infty} f_n d \mu = \lim_{n \to \infty}\int_X f_n d \mu$$
+
+## Fatou's Lemma
+
+## A Theorem
+
+## Lebesgue integrable functions
+
+Let $\mu$ be a positive measure on $(X,\mathfrak{M}_X)$.  Then
+
+$L^1(\mu):=\Big\{ f \in \mathcal{F}(X \to \mathbb{C}) \ : \ f \text{ is measurable } \ \land \ \int_X|f|d\mu < \infty \Big\}$
+
+and we call the set $L^1(\mu)$ **Lebesgue Integrable** *functions*
+
+## Integral of Complex Functions
+
+for measurable $u,v \ : \ X \to \R$ if $f=u+v_i$ and $f \in L^1(\mu)$ we define
+
+$$
+\int_E f d \mu = \int_E u^+ d \mu - \int_E u^- d \mu + \int_E iv^+ d \mu - \int_E iv^- d \mu
+$$
+
+## Linearity of the Integral on $L^1(\mu)$
+
+for $f, g \in L^1 (\mu)$ and $\alpha,\beta \in \mathbb{C}$ $\alpha f + \beta g \in L_1(\mu)$ and
+
+$$\int_X (\alpha f + \beta g) d \mu = \alpha\int_X f \ d \mu  + \beta \int_X g \ d \mu $$
+
+## Integrals and Absolute Values
+
+If $f \in L^1(\mu)$
+
+$$\bigg| \int_X f d \mu \bigg| \leq \int_X | f | d \mu$$
 
 ### Lebesgue's Dominated Convergence Theorem
 
-suppose $f_n$ is a sequence of complex measureable function on $X$ that converges pointwise to $f$ if there is some $g \in L^1(\mu)
+Suppose $f_n$ is a sequence of complex measureable function on $X$ that converges pointwise to $f$.  If there is some $g \in L^1(\mu)$ such that
+
+$$\forall x \in X \quad \forall n \in \N \quad |f_n(x)| \leq g(x)$$
+
+then $f \in L^1(\mu)$ and
+
+$$\lim_{n \to \infty} \int_X f_n d \mu = \int_X f d \mu$$
+
+$\underline{Proof}$
+
+Need
+
+## Almost Everywhere
+
+A property $P$ holds **almost everywhere** (abreviated a.e.) on $E$ provided it holds on $E - N$ where $\mu(N)=0$ 
+
+## Measures can be completed
+
+## Correlary
+
+Suppose $\{f_n\}$ is a sequence of complex measureable functions defined a.e. on $X$ such that
+
+$$\sum_{n=1}^\infty \int_X |f_n| d \mu < \infty$$
+
+Then the series
+
+$$f(x)= \sum^{\infty}_{i=0} f_n (x)$$
+
+converges for almost all $x$, $f \in L^1(\mu)$ and
+
+$$\int_X f d \mu = \sum_{n=1}^\infty \int_X f_n d \mu$$
+
+$\underline{Proof}$
+
+Need
+
+## Instances of Almost Anywhere
+
+1. For measurable function $f \ : \ X \to [0,\infty]$, $E \in \mathfrak{M}_X$ with $\int_E f d \mu=0$, $f=0$ a.e. on $E$
+2. $f \in L^1(\mu)$ and $\forall E \in \mathfrak{M} \quad \int_E f d \mu=0$.  Then $f=0$ a.e. on $X$
+3. Suppose $f \in L^1(\mu)$ and $\Big|\int_X f d \mu \Big| = \int_X |f|d \mu$ then there is a constant $\alpha$ such that $\alpha f =|f|$
+
+$\underline{Proof}$
+
+Need
+
+## A set containing all average values must contain almost all values
+
+Suppose $\mu(X)<\infty$, $f \in L^1(\mu), S \subset \mathbb{C}$ and for all $E \in \mathfrak{M}$
+
+$$\Bigg(\frac{1}{\mu (E)} \int_E f \  d \mu \Bigg) \in \bar{S}$$
+
+Then $f(x) \in S$ for almost all $x \in X$
+
+## Borel–Cantelli lemma
+
+For $E \in \mathcal{F}(\N \to \mathfrak{M}_X)$
+
+$$\sum_{k=0}^\infty \mu (E_k) < \infty \quad \rightarrow \quad \mu(\bigcap_{n=0}^\infty \bigcup_{m\geq n}^\infty E_n)=0$$
+
+$\underline{Proof}$
+
+Need
