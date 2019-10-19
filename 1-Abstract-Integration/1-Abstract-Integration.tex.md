@@ -102,13 +102,17 @@ for all possible $\mathfrak{M}$ $\sigma$-algebras in $X$ containing $\mathscr{F}
 
 $\underline{Proof}$
 
-Since $\mathcal{P}(X)\in \big\{\mathfrak{M} \in  \Omega_X  \ : \  \mathscr{F} \subset \mathcal{X} \cap \mathfrak{M} \big\}$ we know $\mathscr{F} \in \mathfrak{M}^* := \bigcap \big\{\mathfrak{M} \in  \Omega_X  \ : \ \mathscr{F} \subset \mathscr{F} \cap \mathfrak{M}  \big\}$.  By its definition $\mathfrak{M}^*$  contains all possible $\sigma$-algebras in $X$ containing \mathscr{F}.  Hence we need only prove it is itself a $\sigma$-algebra.  Notice any collection of sets that form a subset of $\mathfrak{M}^*$ must be contained in all $\sigma$-algebras on $X$ containing $\mathscr{F}$ and hence any $\sigma$-algebra operation you could do on that collection would be contained in all $\sigma$-algebras on $X$ containing $\mathscr{F}$, and hence would be contained in the their intersection (i.e. $\mathfrak{M}^*$).  
+Since $\mathcal{P}(X)\in \big\{\mathfrak{M} \in  \Omega_X  \ : \  \mathscr{F} \subset \mathcal{X} \cap \mathfrak{M} \big\}$ we know $\mathscr{F} \in \mathfrak{M}^* := \bigcap \big\{\mathfrak{M} \in  \Omega_X  \ : \ \mathscr{F} \subset \mathscr{F} \cap \mathfrak{M}  \big\}$.  By its definition $\mathfrak{M}^*$  contains all possible $\sigma$-algebras in $X$ containing $\mathscr{F}$.  Hence we need only prove it is itself a $\sigma$-algebra.  Notice any collection of sets that form a subset of $\mathfrak{M}^*$ must be contained in all $\sigma$-algebras on $X$ containing $\mathscr{F}$ and hence any $\sigma$-algebra operation you could do on that collection would be contained in all $\sigma$-algebras on $X$ containing $\mathscr{F}$, and hence would be contained in the their intersection (i.e. $\mathfrak{M}^*$).  
+
+*Come back later and reword "$\sigma$-algebra operation" and make complementation clearer*
+
+>With this lemma we immediately see any set has 'many' collections of subsets that meet the criteria to be $\sigma$-algebras.  But more importantly taking $\mathscr{F}$ to be a set's topology shows that every topological space has a related structure that can be analyzed with measure theory.
 
 ## Properties of mappings from measurable spaces
 
 For $(X,\mathfrak{M}_X)$, $(Y,\mathcal{T}_Y)$, and $f : X \to Y$
 
-1. $\Big\{ E \in \mathcal{P}(Y) \ : \ f^{-1}(E) \in \mathfrak{M}_X \Big\}$ is a $\sigma$-algebra in $X$
+1. $\Big\{ E \in \mathcal{P}(Y) \ : \ f^{-1}(E) \in \mathfrak{M}_X \Big\}$ is a $\sigma$-algebra in $Y$
 2. if $f$ is measurable then $\bigcup_{E \in \mathscr{B}_{\mathcal{T}_Y}}$ $f^{-1}(E)$ $\subset \mathfrak{M}_X$
 3. For Y=$[-\infty,\infty]$, if $\{f^{-1}((\alpha,\infty)) \subset X \ : \ \alpha \in \R \}$ $\subset \mathfrak{M}_X$ then $f$ is measurable
 4. Borel mapping composition preserves measurability
@@ -244,8 +248,6 @@ The **Lebesgue Integral** of a measurable function $f : X \to [0,\infty]$ is def
 $$\int_E f \ d\mu = \sup \{ \int_E s \ d\mu \ : \ s \in \mathfrak{S}_{X \to [0,\infty]} \ \land \ 0 \leq s \leq f \}$$
 
 ## Elementary Properties of the Lebesgue Integral
-
-The Following follow immediately from out definitions of the *Lebesgue integral*
 
 1. $0 \leq f \leq g \implies \int_E f \ d \mu \leq \int_E g \ d \mu$
 2. $A \subset B \land f \geq 0 \implies \int_A f \ d \mu \leq \int_B f \ d \mu$
