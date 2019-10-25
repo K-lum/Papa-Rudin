@@ -12,7 +12,7 @@ $\mathcal{T}_X$ is a *topology* and $\mathscr{T}_X$ is the *family of topologies
 
 For $(X,\mathcal{T}_X)$ and $(Y,\mathcal{T}_Y)$, we say a function $f : X \to Y$ is *continuous* when $\bigcup_{V \in \mathcal{T}_Y}\{f^{-1}(V)\} \subseteq \mathcal{T}_X$.  Equivalently we write $f \in C(X \to Y)$
 
-Locally, we can say $g : X \to Y$ is *continuous at the point* $x_0$ provided every neighborhood of $g(x_0)$ contains the image of a neighborhood of $x_0$.  It can be proven that a function is continous if and only if it is continuous at all points.
+We can say $g : X \to Y$ is *continuous at the point* $x_0$ provided every neighborhood of $g(x_0)$ contains the image of a neighborhood of $x_0$.  It can be proven that a function is continous if and only if it is continuous at all points.
 
 ## **Measurable Space**
 
@@ -142,7 +142,7 @@ For $f : \N \to \mathcal{F}(X \to [-\infty,\infty])$ if
 
 $$f(x)=\lim_{n \to \infty} f_n (x)$$
 
-Then $f$ is the pointwise limit of $\{f_n\}$ assuming $f_n(x)$ converges for all $x \in X$
+Then $f$ is the **pointwise limit** of $\{f_n\}$ assuming $f_n(x)$ converges for all $x \in X$
 
 ## limsups preserve measurability
 
@@ -168,7 +168,7 @@ A **positive measure** is a function $\mu: \mathfrak{M}_X \to [0,\infty]$ such t
 
 A **complex measure** is a function $\mu: \mathfrak{M}_X \to \mathbb{C}$ such that it is *countably additive*
 
-A **measure space** is a measurable space with a positive measure defined its $\sigma$-algebra
+A **measure space** is a measurable space with a positive measure defined on its $\sigma$-algebra
 
 ## Elementary Properties of Positive Measure
 
